@@ -30,7 +30,7 @@ app.get("/", localAuthMiddleware, function (req, res) {
 });
 
 // Routes
-app.use("/person",localAuthMiddleware, personRoutes);
+app.use("/person",personRoutes);
 app.use("/menu", menuItemRoutes);
 
 app.listen(PORT, () => console.log(`Server listening on Port ${PORT}`));
